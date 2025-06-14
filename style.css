@@ -1,0 +1,22 @@
+
+     body{
+            background-image: url("pattern-squiggly-line-top.svg"),url("background-desktop.png"),url("pattern-lines.svg");
+            background-repeat: no-repeat,no-repeat,no-repeat;
+            background-position: top right,center,center;
+            background-size: auto,auto,auto;
+            
+            
+        }
+        .avatar {
+  /* 8px rounded corners */
+  border-radius: 10px;
+
+  /* make sure the aspect ratio stays sane */
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  top: 440px;
+  left: 470px;
+  position: relative;
+}
+        
