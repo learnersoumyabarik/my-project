@@ -1,22 +1,107 @@
-
-     body{
-            background-image: url("pattern-squiggly-line-top.svg"),url("background-desktop.png"),url("pattern-lines.svg");
-            background-repeat: no-repeat,no-repeat,no-repeat;
-            background-position: top right,center,center;
-            background-size: auto,auto,auto;
-            
-            
-        }
-        .avatar {
-  /* 8px rounded corners */
-  border-radius: 10px;
-
-  /* make sure the aspect ratio stays sane */
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  top: 440px;
-  left: 470px;
-  position: relative;
+@font-face {
+    font-family: 'My-Font';
+    src: url(myfont.ttf) format(truetype);
 }
-        
+
+body {
+    background-image:
+        url("icon-github.svg"),
+        url("logo-mark.svg"),
+        url("pattern-ticket.svg"),
+        url("pattern-squiggly-line-top.svg"),
+        url("pattern-lines.svg"),
+        url("pattern-circle.svg"),
+        url("background-desktop.png");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 42.15% 77.5%, 33% 51%, 50% 70%, top right, center, 75% 70%, center;
+    background-size: auto, auto, 40%, auto, auto, auto, auto;
+    min-height: 100vh;
+    margin: 0; /* Remove default body margin */
+    overflow: hidden; /* To prevent scrollbars if elements go out of bounds */
+}
+
+/* Image Positioning */
+.logo-full {
+    position: fixed;
+    top: 7.5%;
+    left: 41.5%;
+}
+
+.squiggly-line-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.avatar {
+    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    position: relative; /* Keep original positioning */
+    top: 435px;
+    left: 480px;
+}
+
+/* Text Styling and Positioning */
+p {
+    font-family: 'My-Font', Inconsolata, sans-serif; /* Added sans-serif as fallback */
+    text-align: center;
+    color: white; /* Default color for paragraphs */
+    position: relative; /* All paragraphs will be relative as in original */
+}
+
+.congrats-message {
+    transform: translateY(-80px);
+    font-size: 300%;
+}
+
+.email-message {
+    transform: translateY(-110px);
+    font-size: 100%;
+}
+
+.event-title {
+    top: 30%;
+    right: 8.25%;
+    transform: translateY(-75px);
+    font-size: 215%;
+    text-align: initial; /* Override center for this specific paragraph */
+}
+
+.ticket-number {
+    transform: rotate(90deg) translateX(0px);
+    color: whitesmoke;
+    top: -57px;
+    right: -250px;
+    font-size: 215%;
+    position: relative; /* Ensure position is set for transform */
+    text-align: initial; /* Override center for this specific paragraph */
+}
+
+.event-date-location {
+    color: whitesmoke;
+    transform: translateY(-170px);
+    font-size: 100%;
+    right: 8%;
+}
+
+.user-name {
+    transform: translateY(-112px);
+    font-size: 200%;
+}
+
+.user-handle {
+    right: 1.1%;
+    transform: translateY(-135.5px);
+    font-size: 100%;
+}
+
+.event-title {
+    top: 30%; /* Current vertical position */
+    right: -36%; /* Current horizontal position */
+    transform: translateY(-75px); /* Fine-tunes vertical position */
+    font-size: 215%;
+    text-align: initial;
+}
